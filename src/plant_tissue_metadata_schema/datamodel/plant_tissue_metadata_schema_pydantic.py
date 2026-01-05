@@ -392,7 +392,7 @@ class PlantTissueSample(ConfiguredBaseModel):
     harvest_to_preservation_time: Optional[str] = Field(default=None, description="""The time between sampling and sample preservation, minutes""", json_schema_extra = { "linkml_meta": {'alias': 'harvest_to_preservation_time',
          'domain_of': ['PlantTissueSample'],
          'examples': [{'value': '15'}]} })
-    test_value: Optional[TestValueEnum] = Field(default=None, json_schema_extra = { "linkml_meta": {'alias': 'test_value', 'domain_of': ['PlantTissueSample']} })
+    test_value: Optional[TestValueEnum] = Field(default=None, description="""An example enumerated value for testing purposes""", json_schema_extra = { "linkml_meta": {'alias': 'test_value', 'domain_of': ['PlantTissueSample']} })
 
     @field_validator('genetic_modification')
     def pattern_genetic_modification(cls, v):
